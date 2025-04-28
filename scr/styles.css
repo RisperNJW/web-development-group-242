@@ -1,0 +1,70 @@
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: #f8f9fa;  
+}
+
+.custom-btn{  
+    background-color: #007E68;  
+}
+.custom-btn:hover{  
+    background-color: #005f4b;  
+}
+
+.custom-btn-outline{
+    background-color: #00C16E;  
+}
+
+.custom-btn-outline:hover{  
+    background-color: #00A95B;  
+}
+
+.custom-btn-outline:focus{  
+    box-shadow: 0 0 0 0.2rem rgba(0, 193, 110, 0.5);  
+}
+
+.hero {  
+    position: relative;  
+    height: 100vh;
+    display: flex;
+    background-image:path('images/hero.jpg');
+    background-size: cover;
+}  
+
+.hero .hero-image img {  
+    width: 100%;  
+    height: auto;  
+}  
+
+.hero-text {  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    text-align: center;  
+}  
+
+.service {  
+    background: gradient(to right, #6c757d, #343a40);  
+    border-radius: 8px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s;  
+}  
+
+.service:hover {  
+    transform: translateY(-5px);  
+}  
+
+.custom-progress {  
+    background-color: #007E68;  
+    border-radius: 5px;  
+    height: 20px;  
+}
+.custom-progress .progress-bar {  
+    background-color: #00C16E;  
+    border-radius: 5px;  
+}
+
+footer {  
+    background: #162E32;  
+    color: white;  
+}  
