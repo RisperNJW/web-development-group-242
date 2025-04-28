@@ -1,0 +1,334 @@
+/* General Styles */
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: #f8f9fa;
+    padding-top: 76px; /* For fixed navbar */
+    scroll-behavior: smooth;
+}
+
+/* Buttons */
+.custom-btn {  
+    background-color: #007E68;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {  
+    background-color: #005f4b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 126, 104, 0.3);
+}
+
+.custom-btn-outline {
+    background-color: #00C16E;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn-outline:hover {  
+    background-color: #00A95B;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 193, 110, 0.3);
+}
+
+.custom-btn-outline:focus {  
+    box-shadow: 0 0 0 0.2rem rgba(0, 193, 110, 0.5);  
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #007E68;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hero Section */
+.hero {  
+    position: relative;  
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero .hero-image img {  
+    width: 100%;  
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.hero .container {
+    z-index: 2;
+}
+
+/* Services Section */
+.service {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.service:hover {  
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 126, 104, 0.1);
+    color: #007E68;
+    transition: all 0.3s ease;
+}
+
+.service:hover .icon-box {
+    background-color: #007E68;
+    color: white;
+    transform: rotateY(360deg);
+}
+
+/* Skills Section */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+    overflow: visible;
+}
+
+.custom-progress {  
+    background-color: #007E68;  
+    border-radius: 5px;
+    position: relative;
+}
+
+.custom-progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007E68;
+    border: 3px solid white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Portfolio Section */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 126, 104, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    display: flex;
+    gap: 10px;
+}
+
+.overlay-content a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    color: #007E68;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .overlay-content a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-item:hover .overlay-content a:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+/* Contact Section */
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007E68;
+    box-shadow: 0 0 0 0.2rem rgba(0, 126, 104, 0.25);
+}
+
+/* Footer */
+footer {  
+    background: #162E32;  
+    color: white;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #00C16E !important;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        height: 70vh;
+    }
+    
+    h1.display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .service {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero {
+        height: 60vh;
+    }
+    
+    h1.display-3 {
+        font-size: 2rem;
+    }
+    
+    .custom-btn, .custom-btn-outline {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
